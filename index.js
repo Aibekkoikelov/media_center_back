@@ -11,8 +11,8 @@ app.use(cookieParser());  // Подключаем cookie-parser для рабо�
 app.use(cors())
 const API_KEY = '6986635019:AAGKMyQDiRNQce_xyHHNQRLR1GJwhKk9lDI'
 let bot;
-
-app.listen(4000, "0.0.0.0",() => {
+let PORT = process.env.PORT || 4000;
+app.listen(PORT, "0.0.0.0",() => {
     console.log('Server started on port 3001' );
     bot = new TelegramBot(API_KEY, {
         polling: false
