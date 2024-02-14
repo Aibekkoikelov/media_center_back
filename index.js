@@ -15,7 +15,7 @@ let bot;
 app.listen(3001, () => {
     console.log('Server started on port 3001' );
     bot = new TelegramBot(API_KEY, {
-        polling: true
+        polling: false
     });
 });
 
