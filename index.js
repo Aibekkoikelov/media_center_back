@@ -13,12 +13,12 @@ app.use(cookieParser());  // Подключаем cookie-parser для рабо�
 app.use(cors())
 const API_KEY = '6986635019:AAGKMyQDiRNQce_xyHHNQRLR1GJwhKk9lDI'
 let bot;
-
+bot = new TelegramBot(API_KEY, {
+    polling: true
+});
 app.listen(3001, () => {
     console.log('Server started on port 3001' );
-   bot = new TelegramBot(API_KEY, {
-        polling: true
-    });
+
 });
 bot.on('text', async msg => {
     id = await msg.from.id
