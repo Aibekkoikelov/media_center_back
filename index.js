@@ -31,7 +31,7 @@ app.post('/contact', async(req, res) => {
     }
 
 } )
-// app.get("/", (reg, res)=> {
-//     res.send("hello")
-// })
+app.get("/", (reg, res)=> {
+    res.send("hello")
+})
 
