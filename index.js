@@ -12,7 +12,7 @@ app.use(cors())
 const API_KEY = '6986635019:AAGKMyQDiRNQce_xyHHNQRLR1GJwhKk9lDI'
 let bot;
 
-app.listen(3001, () => {
+app.listen(3001, "0.0.0.0",() => {
     console.log('Server started on port 3001' );
     bot = new TelegramBot(API_KEY, {
         polling: false
@@ -26,7 +26,7 @@ app.post('/contact', async(req, res) => {
     try{
         await bot.sendContact(id, req.body.number, req.body.name)
     }
-    catch{
+    catch {
         console.log("jopa")
     }
 
