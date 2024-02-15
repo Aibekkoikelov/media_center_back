@@ -26,7 +26,8 @@ app.post('/contact', async(req, res) => {
     try{
         await bot.sendContact(id, req.body.number, req.body.name)
     }
-    catch {
+    catch (e){
+        console.log(e)
         console.log("jopa")
     }
 
